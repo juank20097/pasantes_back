@@ -51,9 +51,6 @@ public class Empresa{
 	@Column(name = "direccion", length = 500 ,nullable = false)
 	private String direccion;
 	
-	/** The nombre. */
-	@Column(name = "nombre", length = 500 ,nullable = false)
-	private String nombre;
 	
 	/** The telefono. */
 	@Column(name = "telefono", length = 10, nullable = false)
@@ -212,23 +209,7 @@ public Integer getIdEmpr() {
 		this.telefono = telefono;
 	}
 
-	/**
-	 * Gets the nombre.
-	 *
-	 * @return the nombre
-	 */
-	public String getNombre() {
-		return nombre;
-	}
-	/**
-	 * Sets the nombre.
-	 *
-	 * @param telefono the new nombre
-	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
+
 	
 
 
