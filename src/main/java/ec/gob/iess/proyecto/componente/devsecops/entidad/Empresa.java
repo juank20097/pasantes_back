@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
  * Mapeo de la tabla [EMPRESA].
  */
 @Entity
-@Table(name = "EMPRESA")
+@Table(name = "EMPRESA", schema = "andres")
 @SequenceGenerator(name = "empresa_s", sequenceName = "empresa_s", allocationSize = 1)
 public class Empresa{
 	

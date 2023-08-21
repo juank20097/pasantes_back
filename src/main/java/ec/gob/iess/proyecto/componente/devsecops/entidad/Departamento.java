@@ -23,7 +23,7 @@ import jakarta.persistence.Table;
  */
 
 @Entity
-@Table(name = "DEPARTAMENTO")
+@Table(name = "DEPARTAMENTO", schema = "andres")
 @SequenceGenerator(name = "departamento_s", sequenceName = "departamento_s", allocationSize = 1)
 
 public class Departamento{
