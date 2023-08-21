@@ -23,10 +23,13 @@ Proyecto para cargar los códigos del proyecto backend pasantes
     
 empresa
 curl -k -X POST https://localhost:9443/oauth2/token -d "grant_type=client_credentials" -H"Authorization: Basic dThzeDBaN1hCNWY5cmUzSkpmOUlnMFV5WTFFYTpCYzdTZEgyZVM5azRHajV2QjJPQzl3Z2VQS29h"
+
 departamento
 curl -k -X POST https://localhost:9443/oauth2/token -d "grant_type=client_credentials" -H"Authorization: Basic dnZXV0J6ZkVQOW96SkVKUGRYV3Q0dVVjUElBYTpoR2s0QW9jUVAyRUdfSk5Fb2FxN3J4Um5YZ2th"
+
 empleado
 curl -k -X POST https://localhost:9443/oauth2/token -d "grant_type=client_credentials" -H"Authorization: Basic aHFmQ0ZJbzd2OVpiU1hqOVRsUFRZbVl3SXdzYTpqZlViNGdOeURPbmNmTmw4VGFRNUFJV0pEcllh"
+
 departamento_empleado
 curl -k -X POST https://localhost:9443/oauth2/token -d "grant_type=client_credentials" -H"Authorization: Basic ZTR0OU9yT0drZk9FTmlTcW9jY2pxcXNoY0ZRYTptUVdFSGVGSGduRHhpckpIWGZXM2tGekgzV0Fh"
 
