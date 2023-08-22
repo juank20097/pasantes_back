@@ -29,9 +29,11 @@ Proyecto para cargar los códigos del proyecto backend pasantes
 16. Dirigirse a la direccion del proyecto y dentro de la carpeta "colleccion_insomnia" seleccionar el archivo "Insomnia_colleccion_devsecops"
 
 *consumo de servicios en local (sin seguridades)*
+
 17. Ejecutar los servicios de la carpeta "local" desde el Software Insomnia
 
 *consumo de servicios en WSO2 (con seguridades)*
+
 18. Ejecutar los servicios de la carpeta "WSO2" desde el Software Insomnia
 
 
@@ -53,4 +55,26 @@ Proyecto para cargar los códigos del proyecto backend pasantes
     curl -k -X POST https://localhost:9443/oauth2/token -d "grant_type=client_credentials" -H"Authorization: Basic ZTR0OU9yT0drZk9FTmlTcW9jY2pxcXNoY0ZRYTptUVdFSGVGSGduRHhpckpIWGZXM2tGekgzV0Fh" 
     
 20. Volver a Insomnia, seleccionar el servicio y en la pestaña de "AUTH TYPE" selecionar "Bearer Token" y pegar el "access_token" en el campo "TOKEN" y hacer clic en el boton "send"
+
+## Documentación en Swagger
+
+21. Abrir el archivo "application.properties" y colocar la configuracion de la ruta para la interfaz swagger: "springdoc.swagger-ui.path=/swagger-ui.html"
+    
+22. La página de la interfaz de usuario de Swagger estará disponible en http://server:port/context-path/swagger-ui.html
+    
+23. La documentación estará disponible en la siguiente URL para formato json: http://server:port/context-path/v3/api-docs
+
+24. La documentación también estará disponible en formato yaml, en la siguiente ruta: /v3/api-docs.yaml
+    
+    servidor: El nombre del servidor o IP
+    
+    puerto: El puerto del servidor
+    
+    context-path: la ruta de contexto de la aplicación (opcional)
+
+
+
+
+
+
 
