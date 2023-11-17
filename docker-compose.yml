@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  spring:
+    container_name: nombrecontenedor
+    image: nombreimagen
+    ports:
+      - 8081:8081
+    environment:
+      - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+      - spring.jpa.database=POSTGRESQL
+      - spring.jpa.show-sql=true
+      - spring.jpa.hibernate.ddl-auto=update
+      - spring.datasource.driver-class-name=org.postgresql.Driver
+      - spring.datasource.url=jdbc:postgresql://localhost:5433/nombreDB
+      - spring.datasource.username=postgres
+      - spring.datasource.password=root
+      - spring.jpa.properties.hibernate.default_schema=public
+      - springdoc.swagger-ui.path=/swagger-ui.html
+      - server.port=8081

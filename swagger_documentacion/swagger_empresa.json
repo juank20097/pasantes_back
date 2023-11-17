@@ -1,0 +1,134 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Empresa",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://localhost:8243/iess-ws-devsecops/1.0/empresas"
+  }, {
+    "url" : "http://localhost:8280/iess-ws-devsecops/1.0/empresas"
+  } ],
+  "security" : [ {
+    "default" : [ ]
+  } ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "description" : "Retorna una lista de empresas con estado activo",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "ok"
+          }
+        },
+        "security" : [ {
+          "default" : [ ]
+        } ],
+        "x-auth-type" : "Application & Application User",
+        "x-throttling-tier" : "Unlimited"
+      },
+      "post" : {
+        "description" : "Ingresa una empresa y lo retorna",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "ok"
+          }
+        },
+        "security" : [ {
+          "default" : [ ]
+        } ],
+        "x-auth-type" : "Application & Application User",
+        "x-throttling-tier" : "Unlimited"
+      }
+    },
+    "/{id}" : {
+      "get" : {
+        "description" : "Retorna una empresa que se busca por su id",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok"
+          }
+        },
+        "security" : [ {
+          "default" : [ ]
+        } ],
+        "x-auth-type" : "Application & Application User",
+        "x-throttling-tier" : "Unlimited"
+      },
+      "put" : {
+        "description" : "Actualiza una empresa por medio del id y lo retorna ",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok"
+          }
+        },
+        "security" : [ {
+          "default" : [ ]
+        } ],
+        "x-auth-type" : "Application & Application User",
+        "x-throttling-tier" : "Unlimited"
+      },
+      "delete" : {
+        "description" : "Elimina una empresa por id y retorna una lista actualizada de las empresas con estado activo",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok"
+          }
+        },
+        "security" : [ {
+          "default" : [ ]
+        } ],
+        "x-auth-type" : "Application & Application User",
+        "x-throttling-tier" : "Unlimited"
+      }
+    }
+  },
+  "components" : {
+    "securitySchemes" : {
+      "default" : {
+        "type" : "oauth2",
+        "flows" : {
+          "implicit" : {
+            "authorizationUrl" : "https://localhost:8243/authorize",
+            "scopes" : { }
+          }
+        }
+      }
+    }
+  }
+}
